@@ -1,4 +1,8 @@
+<<<<<<< HEAD
   =>  Template Name    : OptiNex - Financial Services Website Template
+=======
+  =>  Template Name    : Finanza - Financial Services Website Template
+>>>>>>> 3b37a3bd4e4187448c651df3b6779ec91f870a8d
 
   =>  Template Link    : https://htmlcodex.com/financial-services-website-template
 
