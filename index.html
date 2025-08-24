@@ -11,19 +11,6 @@
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 7.9.2, nicepage.com">
     <meta name="referrer" content="origin">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700">
     <script type="application/ld+json">{
@@ -474,14 +461,15 @@ Value.</h4>
       class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle" required></textarea>
   </div>
 
-  <!-- Hidden fields for FormSubmit -->
+  <!-- FormSubmit options -->
   <input type="hidden" name="_subject" value="New Contact Message from OptiNex Website">
   <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://optinex.me"> <!-- or keep as "#" if no redirect -->
+  <input type="hidden" name="_captcha" value="true">         <!-- use FormSubmit captcha -->
+  <input type="hidden" name="_next" value="https://optinex.me/thanks.html">
+  <input type="hidden" name="_replyto" value="">             <!-- auto-sets from 'email' input -->
 
-  <!-- reCAPTCHA response holder -->
-  <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+  <!-- Honeypot (spam trap) -->
+  <input type="text" name="_honey" style="display:none">
 
   <!-- Submit Button -->
   <div class="u-align-left u-form-group u-form-submit">
@@ -491,25 +479,9 @@ Value.</h4>
     </button>
   </div>
 
-  <!-- Feedback message -->
   <div id="form-response" style="margin-top: 20px; display: none;" class="u-text u-text-body-alt-color"></div>
 </form>
 
-<!-- Include reCAPTCHA v3 Script -->
-<script src="https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY"></script>
-
-<script>
-  grecaptcha.ready(function () {
-    document.getElementById('optinex-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      grecaptcha.execute('YOUR_SITE_KEY', { action: 'submit' }).then(function (token) {
-        document.getElementById('g-recaptcha-response').value = token;
-        e.target.submit(); // Allow normal submission to FormSubmit
-      });
-    });
-  });
-</script>
 
                   </div>
                 </div>
